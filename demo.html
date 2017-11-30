@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
 </head>
 <body>
     <a id="audio" href="javascript:;" title="停止录音">录音按钮</a>
     <script>
-        share();
-        var audio = document.getElementById('audio');
-        audio.onmousedown = function(){
-            share('开始录音');
-        };
-        audio.onmouseup = function(){
-            share('停止录音');
-        };
+        if(typeof share !== 'undefined'){
+            $.get('http://for.webapp.http.request');
+
+            var audio = document.getElementById('audio');
+            audio.onmousedown = function(){
+                share('开始录音');
+            };
+            audio.onmouseup = function(){
+                share('停止录音');
+            };
+        }
     </script>
 </body>
 </html>
