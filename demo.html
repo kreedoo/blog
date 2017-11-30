@@ -10,10 +10,10 @@
     <script>
         var audio = document.getElementById('audio');
         audio.onmousedown = function(){
-            audio.title = '正在录音';
+            share('开始录音');
         };
         audio.onmouseup = function(){
-            audio.title = '停止录音';
+            share('停止录音');
         };
     </script>
 </body>
