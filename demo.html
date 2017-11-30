@@ -9,17 +9,18 @@
 <body>
     <a id="audio" href="javascript:;" title="停止录音">录音按钮</a>
     <script>
-        if(typeof share !== 'undefined'){
-            $.get('http://for.webapp.http.request');
-
-            var audio = document.getElementById('audio');
-            audio.onmousedown = function(){
-                share('开始录音');
-            };
-            audio.onmouseup = function(){
-                share('停止录音');
-            };
-        }
+        $.get('http://www.ywenbin.com/demo.html');
+        
+        var isInApp = typeof share !== 'undefined';
+        var audio = document.getElementById('audio');
+        audio.onmousedown = function(){
+            if(isInApp) share('开始录音');
+            console.log('开始录音');
+        };
+        audio.onmouseup = function(){
+            if(isInApp) share('停止录音');
+            console.log('停止录音');
+        };
     </script>
 </body>
 </html>
